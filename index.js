@@ -1,5 +1,4 @@
 
-/*
 if (window.Telegram.WebApp.initDataUnsafe) {
 
 
@@ -20,12 +19,12 @@ if (window.Telegram.WebApp.initDataUnsafe) {
 
 
 
-  fetch('https://debc-89-22-177-227.ngrok-free.app/receive_tg_id ', {
+  fetch('https://43df-89-22-177-227.ngrok-free.app/receive_tg_id', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ id: 1 })
+    body: JSON.stringify({ id: tgId })
   })
   .then(response => {
     if (!response.ok) {
@@ -47,13 +46,12 @@ if (window.Telegram.WebApp.initDataUnsafe) {
     console.error('Ошибка:', error);
     document.getElementById('user-data').textContent = 'Ошибка при загрузке данных пользователя: ' + error.message;
   });
-/*
+  
   } else {
   document.getElementById('tg-id').textContent = 'Ошибка: initDataUnsafe не доступен.';
   document.getElementById('user-data').textContent = '';
   }
 
-*/
 
 
 
