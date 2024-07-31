@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+
+.rectangle {
+  position: relative;
+  top: 10px;
+  width: calc(100% - 20px); /* Ширина прямоугольника */
+  aspect-ratio: 60 / 47;
+  background-color: #1B1B1B; /* Черный фон */
+  border-radius: 40px; /* Скругление углов радиусом 40 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  position: absolute;
+  top: 16%; /* Отступ сверху */
+  left: 50%;
+  transform: translateX(-50%); /* Центрирование по горизонтали */
+  font-family: 'Sora', sans-serif; /* Шрифт Sora */
+  font-weight: 400; /* Тонкость regular */
+  font-size: 13px; /* Размер шрифта 13 */
+  color: #d0d0d0; /* Белый цвет текста */
+}
+
+.balance {
+  position: absolute;
+  top: 27%; /* Отступ сверху для второй надписи */
+  left: 50%;
+  transform: translateX(-50%); /* Центрирование по горизонтали */
+  font-family: 'Sora', sans-serif; /* Шрифт Sora */
+  font-weight: 300; /* Тонкость regular */
+  font-size: 32px; /* Размер шрифта 13 */
+  color: #fff; /* Белый цвет текста */
+}
+
+.balance::before {
+  content: '₽ '; /* Значок рубля и пробел перед надписью */
+  color: #d0d0d0; /* Серый цвет значка рубля */
+}
+
+.green-rectangle {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translateX(-50%); /* Центрирование по горизонтали */
+  width: 230px; /* Ширина зеленого прямоугольника */
+  height: 85px; /* Высота зеленого прямоугольника */
+  background-color: #1B1B1B; /* Зеленый фон */
+  border: 1px solid #1adb5c;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grey-rectangle {
+  position: absolute;
+  width: calc(100% - 4px); /* Ширина серого прямоугольника */
+  height: calc(100% - 4px); /* Высота серого прямоугольника */
+  background-color: #3b3b3b; /* Серый фон */
+  border-radius: 17px;
+}
+
+.icon-circle {
+  position: absolute;
+  width: 45px; /* Диаметр круга */
+  height: 45px; /* Диаметр круга */
+  background-color: #535353; /* Темно-серый цвет */
+  border-radius: 50%; /* Скругление до круга */
+  top: 8px; /* Положение по вертикали чуть выше середины */
+  border: 1px solid #343434;
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+}
+
+.icon-circle.left {
+  left: 55px; /* Положение первого круга по горизонтали */
+  transform: translateX(-50%);
+}
+
+.icon-circle.right {
+  right: 55px; /* Положение второго круга по горизонтали */
+  transform: translateX(50%);
+}
+.label {
+  position: absolute;
+  top: 60px; /* Отступ сверху для надписи */
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: #fff;
+}
+
+.label.left {
+  left: 55px;
+  transform: translateX(-50%);
+}
+
+.label.right {
+  right: 55px;
+  transform: translateX(50%);
+}
+
+.history {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-left: 6%;
+  margin-top: ;
+  position: relative;
+}
+
+.bottom-line {
+  position: absolute;
+  bottom: 55px;
+  width: 100%; /* Ширина линии */
+  border-top: 1px solid #f5f5f5; /* Черная линия толщиной 2 пикселя */
+  background-color: #ececec;
+  height: 2px;
+
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 70px;
+  height: 60px;
+  bottom: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.viemka {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+
+}
+
+.PlayButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: absolute;
+}
+
+.bottom-icon {
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 44px;
+  bottom: 5px;
+}
+
+.bottom-icon.left {
+  left: 15%;
+}
+
+.bottom-icon.right {
+  right: 15%;
+}

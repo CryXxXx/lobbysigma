@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+
+.green-circle {
+    width: 35px; /* Диаметр круга */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%; /* Скругление углов до круга */
+    position: absolute;
+    top: 40px; /* Отступ сверху на 20 пикселей */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green-circle.left {
+    left: 6%; /* Отступ справа на 20 пикселей */
+}
+
+.green-circle.right {
+    right: 6%; /* Отступ справа на 20 пикселей */
+    box-shadow: 0 0 0 1.2px #1b1b1b;
+    background-color: #0ACC58; /* Зеленый цвет фона */
+}
+
+
+.inner-circle {
+    width: calc(100% - 2px); /* Диаметр внутреннего круга */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%; /* Скругление углов до круга */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: absolute;
+
+}
+
+.inner-circle.right {
+    box-shadow: 0 0 0 1.2px #20c859;
+    overflow: hidden; /* Обрезка содержимого до формы круга */
+}
+
+.circle-image {
+    object-fit: cover; /* Масштабирование изображения для заполнения круга */
+}
+
+.circle-image.left {
+    width: auto; /* Ширина изображения равна ширине внутреннего круга */
+    height: auto; /* Высота изображения равна высоте внутреннего круга */
+}
+
+.circle-image.right {
+    width: 100%; /* Ширина изображения равна ширине внутреннего круга */
+    height: 100%; /* Высота изображения равна высоте внутреннего круга */
+}
+
+
+.byx {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700; /* Вес шрифта 300 */
+    color: #1b1b1b;
+    top: 28px; /* Отступ сверху на 20 пикселей */
+    position: absolute;
+    left: 50%; /* Сдвиг влево на 50% */
+    transform: translateX(-50%);
+}
+
+.lobby-black {
+    width: 100%; /* Ширина SVG */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0px; /* Отступ сверху */
+    left: 0px; /* Отступ слева */
+    z-index: 0; /* Уровень слоя */
+}
+
+.black-rectangle {
+    width: calc(100% - 50px);
+    min-width: 270px;
+    aspect-ratio: 3 / 1;
+    position: absolute;
+    padding: 0px;
+    top: 70px; /* Отступ сверху */
+    left: 50%; /* Сдвиг влево на 50% */
+    transform: translateX(-50%); /* Смещение контейнера на половину его ширины влево */
+}
+
+.money {
+    font-family: 'Sora', sans-serif;
+    font-size: 30px;
+    font-weight: 300; /* Вес шрифта 300 */
+    color: #fff;
+    top: 44%;
+    left: 5%;
+    position: absolute;
+}
+
+.money::before {
+    content: '₽ ';
+    color: #a1a1a1;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.gray-text {
+    font-family: 'Sora', sans-serif;
+    font-size: 10.5px;
+    font-weight: 300; /* Вес шрифта 300 */
+    color: #a1a1a1;
+    top: 18%;
+    left: 5%;
+    position: absolute;
+}
+
+.change {
+    width: 50px;
+    height: 22px;
+    border: 1px solid #a1a1a1;
+    border-radius: 100px;
+    position: absolute;
+    right: 7%;
+    top: 13%;
+}
+
+.money-circle {
+    aspect-ratio: 1 / 1;
+    height: calc(100% - 4px); /* Диаметр круга */
+    border-radius: 50%; /* Скругление углов до круга */
+    position: absolute;
+    top: 2px; /* Отступ сверху на 20 пикселей */
+    left: 2px;
+    border: 1px solid #20c859;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.percent {
+    font-family: 'Sora', sans-serif;
+    font-size: 12px;
+    right: 9%;
+    top: 57%;
+    font-weight: 200; /* Вес шрифта 300 */
+    color: #20c859;
+    position: absolute;
+}
+.percent::before{
+    content: '▴';
+    font-size: 13px;
+    font-weight: 200; /* Вес шрифта 300 */
+}
+
+.percent::after{
+    content: '%';
+}
+
+.container {
+    width: auto;
+    height: auto; /* Высота прямоугольника */
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    gap: 2px;
+    top: 30%;
+    left: 50%; /* Сдвиг влево на 50% */
+    transform: translateX(-50%); /* Смещение контейнера на половину его ширины влево */
+}
+  
+.svg-item {
+    width: auto;
+    height: auto;
+    position: relative;
+    flex-basis: 25%;
+    transition: transform 1.5s ease-in-out;
+}
+
+.tt {
+    flex-grow: 1;
+    width: 21vw; /* Ширина изображения равна ширине внутреннего круга */
+    height: auto; /* Высота изображения равна высоте внутреннего круга */
+}
+
+.last-percent {
+    font-family: 'Sora', sans-serif;
+    font-size: 10px;
+    font-weight: 400; /* Вес шрифта 300 */
+    color: #696969;
+    position: absolute;
+    top: 17%;
+    left: 15%;
+}
+
+.last-percent::after {
+    content: "%";
+}
+
+.last-percent::before {
+    content: "+";
+}
+
+.bigbox {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    left: 50%; /* Сдвиг влево на 50% */
+    transform: translateX(-50%); /* Смещение контейнера на половину его ширины влево */
+    top: 39%;
+    flex-grow: 1;
+    width: calc(100% - 40px);
+    min-width: 270px;
+    height: auto;
+}
+
+.white-box {
+    width: 100%; /* Ширина изображения равна ширине внутреннего круга */
+    height: 100%; /* Высота изображения равна высоте внутреннего круга */
+}
+
+
+.bet-box {
+    width: 50%;
+    aspect-ratio: 9 / 2;
+    border-radius: 100px;
+    background-color: #1b1b1b;
+    border: 1px solid #666666;
+    bottom: 7%;
+    transform-origin: center;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bet-amount {
+    font-family: 'Sora', sans-serif;
+    font-size: 12px;
+    font-weight: 400; /* Вес шрифта 300 */
+    color: #fff;
+    position: absolute;
+}
+
+.bet-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.bet-circle {
+    aspect-ratio: 1 / 1;
+    height: calc(100% - 8px); /* Диаметр круга */
+    border-radius: 50%; /* Скругление углов до круга */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Обрезка содержимого до формы круга */
+    top: 4px;
+}
+
+.bet-circle.less {
+    left: 4px;
+}
+
+.bet-circle.more {
+    right: 4px;
+}
+
+.buy-button {
+    min-width: 93px;
+    width: 28%;
+    aspect-ratio: 3 / 1;
+    left: 50%; /* Сдвиг влево на 50% */
+    transform: translateX(-50%); /* Смещение контейнера на половину его ширины влево */
+    background-color: #1adb5c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    bottom: 2%;
+    position: absolute;
+    box-shadow: 0 0 0 2px #1b1b1b;
+}
+
+.black-field {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-color: #1b1b1b;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.buy {
+    font-family: 'Saira', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+
+.bet-circle.less,.bet-circle.more {
+    transform-origin: center;
+  }
+
+@media (min-width: 345px) {
+    .percent {
+        font-size: 13px;
+    }
+
+    .percent::before{
+        font-size: 14px;
+    }
+
+    .gray-text {
+        font-size: 11px;
+    }
+
+    .change {
+        width: 52px;
+        height: 24px;
+    }
+
+}
+
+@media (min-width: 375px) {
+
+    .percent {
+        font-size: 14px;
+    }
+
+    .percent::before{
+        font-size: 15px;
+    }
+
+    .gray-text {
+        font-size: 12.5px;
+    }
+
+    .money {
+        font-size: 33px;
+    }
+
+    .money::before {
+        font-size: 27px;
+    }
+
+    .bet-amount {
+        font-size: 14px;
+    }
+
+    .buy {
+        font-size: 16px;
+    }
+
+    .last-percent {
+        font-size: 11.5px;
+    }
+
+    .change {
+        width: 56px;
+        height: 24px;
+    }
+}
+
+@media (min-width: 400px) {
+
+    .percent {
+        font-size: 16px;
+    }
+
+    .percent::before{
+        font-size: 17px;
+    }
+
+    .gray-text {
+        font-size: 13.5px;
+    }
+
+    .money {
+        font-size: 36px;
+    }
+
+    .money::before {
+        font-size: 30px;
+    }
+
+    .bet-amount {
+        font-size: 15px;
+    }
+
+    .buy {
+        font-size: 18px;
+    }
+
+    .last-percent {
+        font-size: 12.5px;
+    }
+
+    .change {
+        width: 60px;
+        height: 26px;
+    }
+}
+
+@media (min-width: 435px) {
+    .bet-amount {
+        font-size: 16px;
+    }
+    .last-percent {
+        font-size: 13px;
+    }
+
+}
+
+@media (min-height: 610px) {
+
+    .black-rectangle {
+        top: 75px;
+    }
+}
+
+@media (min-height: 660px) {
+    .green-circle {
+        width: 43px; /* Диаметр круга */
+        height: 43px; /* Диаметр круга */
+        top: 44px; /* Отступ сверху на 20 пикселей */
+    }
+
+    .green-circle.right {
+        border: 1.5px solid #1b1b1b;
+    }
+
+    .inner-circle.right {
+        box-shadow: 0 0 0 1.5px #20c859;
+    }
+    
+    .black-rectangle {
+        top: 80px;
+    }
+
+    .byx {
+        top: 31px;
+        font-size: 22px;
+    }
+}
+
+@media (min-height: 740px) {
+
+    .green-circle {
+        top: 46px; /* Отступ сверху на 20 пикселей */
+    }
+
+    .black-rectangle {
+        top: 90px;
+    }
+
+    .byx {
+        top: 31px;
+        font-size: 24px;
+    }
+}
