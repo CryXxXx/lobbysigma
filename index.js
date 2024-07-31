@@ -14,8 +14,7 @@ if (window.Telegram.WebApp.initDataUnsafe) {
 
   const tgId = window.Telegram.WebApp.initDataUnsafe.user.id;
   
-  
-*/
+
 
 
 
