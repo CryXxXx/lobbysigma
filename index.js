@@ -1,4 +1,3 @@
-
 if (window.Telegram.WebApp.initDataUnsafe) {
 
 
@@ -13,6 +12,7 @@ if (window.Telegram.WebApp.initDataUnsafe) {
   
 
   const tgId = window.Telegram.WebApp.initDataUnsafe.user.id;
+  
   
 
 
@@ -45,7 +45,7 @@ if (window.Telegram.WebApp.initDataUnsafe) {
     console.error('Ошибка:', error);
     document.getElementById('user-data').textContent = 'Ошибка при загрузке данных пользователя: ' + error.message;
   });
-  
+
   } else {
   document.getElementById('tg-id').textContent = 'Ошибка: initDataUnsafe не доступен.';
   document.getElementById('user-data').textContent = '';
